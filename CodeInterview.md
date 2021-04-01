@@ -117,3 +117,8 @@ sorted()是全局内置的方法，有返回值，返回对可迭代序列排序
 
 <b>通用序列操作</b>（序列包括列表、元组、字符串、Unicode字符串、buffer对象和xrange对象）
 
+
+
+0,1背包问题
+
+![image-20210330183937258](C:\Users\daluzi\AppData\Roaming\Typora\typora-user-images\image-20210330183937258.png)
