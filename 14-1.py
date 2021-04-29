@@ -33,7 +33,7 @@ class Solution:
         # return res * n
 
         # 数学推导
-        
+
         if n <= 3:
             return n - 1
         a, b = n // 3, n % 3
