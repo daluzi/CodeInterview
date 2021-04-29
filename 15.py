@@ -14,3 +14,5 @@ class Solution:
         #     n >>= 1
         # return res
         return bin(n).count('1')
+
+# print(2&1)
