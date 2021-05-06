@@ -9,18 +9,31 @@
 
 class CQueue:
 
+    # def __init__(self):
+    #     self.que, self.a = [], []
+    #
+    # def appendTail(self, value: int) -> None:
+    #     self.que.append(value)
+    #
+    # def deleteHead(self) -> int:
+    #     if self.a: return self.a.pop()
+    #     if not self.que: return -1
+    #     self.a = self.que[::-1]
+    #     self.que = []
+    #     return self.a.pop()
+
     def __init__(self):
-        self.que, self.a = [], []
+        self.A, self.B = [], []
 
     def appendTail(self, value: int) -> None:
-        self.que.append(value)
+        self.A.append(value)
 
     def deleteHead(self) -> int:
-        if self.a: return self.a.pop()
-        if not self.que: return -1
-        self.a = self.que[::-1]
-        self.que = []
-        return self.a.pop()
+        if self.B: return self.B.pop()
+        if not self.A: return -1
+        while self.A:
+            self.B.append(self.A.pop())
+        return self.B.pop()
 
 
 # Your CQueue object will be instantiated and called as such:

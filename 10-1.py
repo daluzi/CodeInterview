@@ -10,7 +10,12 @@
 
 class Solution:
     def fib(self, n: int) -> int:
-        a = [0, 1]
-        for i in range(2,n+1):
-            a.append((a[i-1] + a[i -2]) % 1000000007)
-        return a[n]
+        # a = [0, 1]
+        # for i in range(2,n+1):
+        #     a.append((a[i-1] + a[i -2]) % 1000000007)
+        # return a[n]
+
+        a, b = 0, 1
+        for _ in range(n):
+            a, b = b, a + b
+        return a % 1000000007

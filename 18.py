@@ -34,14 +34,24 @@ class Solution:
 
 class Solution:
     def deleteNode(self, head: ListNode, val: int) -> ListNode:
-        cur, dum = head, ListNode(0)
-        if head.val == val:
-            head = head.next
-            return head
-        while cur:
-            if cur.val == val:
-                dum.next = cur.next
-                cur = dum
-            dum = cur
-            cur = cur.next
-        return head
+        # cur, dum = head, ListNode(0)
+        # if head.val == val:
+        #     head = head.next
+        #     return head
+        # while cur:
+        #     if cur.val == val:
+        #         dum.next = cur.next
+        #         cur = dum
+        #     dum = cur
+        #     cur = cur.next
+        # return head
+
+        p = ListNode(-1)
+        p.next = head
+        q = p
+        while p.next:
+            if p.next.val == val:
+                p.next = p.next.next
+                break
+            p = p.next
+        return q.next

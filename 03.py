@@ -38,3 +38,19 @@ class Solution:
                 nums[idx] = temp
 
         return None
+
+        # i = 0
+        # while i < len(nums):
+        #     if nums[i] == i:
+        #         i += 1
+        #         continue
+        #     if nums[i] == nums[nums[i]]: return nums[i]
+        #     nums[nums[i]], nums[i] = nums[i], nums[nums[i]]
+        # return -1
+
+
+        # dic = set()
+        # for num in nums:
+        #     if num in dic: return num
+        #     dic.add(num)
+        # return -1
